@@ -20,6 +20,7 @@ def recon(centroids,new_index):
     assert new_index.min() >= 0 and new_index.max() < 65536, "new_index 包含越界索引"
 # 使用矢量化操作替代嵌套循环
     recon_weight = centroids[new_index, 0]
+    print(recon_weight.shape)
     return recon_weight
 
 def run_simulation(code,recon_weight):
